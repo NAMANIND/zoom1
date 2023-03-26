@@ -1,6 +1,6 @@
 const socket = io("/");
 
-const PEER_PORT = 443;
+const PEER_PORT = 3000;
 const peers = {}
 
 
