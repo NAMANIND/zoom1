@@ -1,0 +1,124 @@
+.container {
+  height: 100vh;
+  display: flex;
+}
+.container-left {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+}
+.main-videoes {
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #111111;
+}
+.room-id {
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  color: #111111;
+  position: absolute;
+  padding: 10px;
+  background-color: #fff;
+}
+.main-controls {
+  display: flex;
+  justify-content: space-between;
+  color: #d2d2d2;
+  background-color: #1c1e20;
+}
+.main-controls-blocks {
+  display: flex;
+  padding: 3px 0;
+}
+.main-controls-btn {
+  display: flex;
+  margin: 0 5px;
+  min-width: 60px;
+  cursor: pointer;
+  padding: 6px 8px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-controls-btn:hover {
+  color: #bbbbbb;
+  border-radius: 5px;
+  background-color: #343434;
+}
+.main-controls-btn i {
+  font-size: 18px;
+}
+.main-controls-btn span {
+  margin-top: 6px;
+  font-size: 12px;
+}
+.main-controls-btn .leave-meeting {
+  font-size: 16px;
+  color: #eb534b;
+}
+.container-right {
+  flex: 0.2;
+  display: flex;
+  background-color: #242324;
+  flex-direction: column;
+  border-left: 1px solid #3d3d42;
+}
+.container-header {
+  color: #f4f4f4;
+  text-align: center;
+  padding: 10px 0;
+}
+.main-chat-window {
+  flex-grow: 1;
+}
+.messages {
+  color: #ffffff;
+  list-style: none;
+  max-height: 85vh;
+  overflow-y: scroll;
+}
+.message {
+  display: flex;
+  align-items: center;
+  margin: 2px 0;
+  padding: 5px 10px;
+}
+.main-message-container {
+  padding: 15px 12px;
+  display: flex;
+}
+.main-message-container input {
+  flex-grow: 1;
+  border: none;
+  padding: 5px 0;
+  color: #f4f4f4;
+  background-color: transparent;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.video {
+  transform: rotateY(180deg);
+  height: 200px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+.btn-off {
+  color: #eb534b;
+}
+.user-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-weight: bold;
+}

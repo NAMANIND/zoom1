@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoom - Video Conference</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/room.css" />
+    <link rel="stylesheet" href="./assets/css/scrollbar.css" />
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-left">
+        <div class="main-videoes">
+          <div id="room-id" class="room-id" title="Click to copy to clipboard." onclick="copyRoomId()"></div>
+          <div id="video-grid"></div>
+        </div>
+        <div class="main-controls">
+          <div class="main-controls-blocks">
+            <div onclick="muteUnmute()" class="main-controls-btn" id='mute-unmute'>
+              <i class="fas fa-microphone"></i>
+              <span>Mute</span>
+            </div>
+            <div onclick="videoOnOff()" class="main-controls-btn" id='video-on-off'>
+              <i class="fas fa-video"></i>
+              <span>Stop Video</span>
+            </div>
+          </div>
+          <div class="main-controls-blocks">
+            <div class="main-controls-btn">
+              <i class="fas fa-shield-alt"></i>
+              <span>Security</span>
+            </div>
+            <div class="main-controls-btn">
+              <i class="fa fa-user-friends"></i>
+              <span>Participants</span>
+            </div>
+            <div class="main-controls-btn">
+              <i class="fa fa-comment-alt"></i>
+              <span>Chat</span>
+            </div>
+          </div>
+          <div class="main-controls-blocks">
+            <div class="main-controls-btn">
+              <span class="leave-meeting" onclick="leaveMeeting()">Leave Meeting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="container-header">
+          <h4>Chat</h4>
+        </div>
+        <div class="main-chat-window">
+          <ul class="messages">
+            
+          </ul>
+        </div>
+        <div class="main-message-container">
+          <input
+            type="text"
+            id="chat-message"
+            placeholder="Type your message here..."
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const ROOM_ID = "<%= roomId %>";
+    </script>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./assets/scripts/room.js"></script>
+  </body>
+</html>
